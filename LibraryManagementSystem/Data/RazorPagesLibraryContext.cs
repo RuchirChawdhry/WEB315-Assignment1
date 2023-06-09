@@ -13,4 +13,11 @@ using RazorPagesLibrary.Models;
         }
 
         public DbSet<RazorPagesLibrary.Models.Library> Library { get; set; }
+
+        public DbSet<Library> Books { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Library>().ToTable("Books");
+
+        }
     }
