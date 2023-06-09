@@ -39,6 +39,11 @@ dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 5.*
 ## Scaffolding
 dotnet-aspnet-codegenerator razorpage -m Library -dc RazorPagesLibraryContext -udl -outDir Pages/Books --referenceScriptLibraries -sqlite
 
+## Database Schema/Migrations
+dotnet ef migrations add InitialCreate
+	
+dotnet ef database update
+
 
 
 
