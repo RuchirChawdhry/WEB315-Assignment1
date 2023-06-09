@@ -1,11 +1,11 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace RazorPagesMovie.Models
+namespace RazorPagesLibrary.Models
 {
-    public class Movie
+    public class Library
     {
-    public int BookID { get; set; }
+    public int ID { get; set; }
     public string BookName { get; set; }
     public string BookCategory { get; set; }
     public string BookDescription { get; set; }
