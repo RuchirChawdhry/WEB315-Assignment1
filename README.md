@@ -21,7 +21,6 @@ A Library Management System is a software application designed to efficiently ma
 
 **LoanedByName**: This field stores the name of the person who has borrowed the book. When a book is loaned out, the system records the borrower's information in the LoanedByName field. This feature helps librarians track who has borrowed a particular book and enables efficient management of loaned books. It allows for easy retrieval of borrower information.
 
-
 By incorporating these features, a Library Management System streamlines book management, facilitates efficient searching and borrowing processes, and provides valuable insights into the library's collection and usage.
 
 
