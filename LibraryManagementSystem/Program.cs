@@ -21,7 +21,7 @@ namespace LibraryManagementSystem
                 {
                      var context = services.GetRequiredService<RazorPagesLibraryContext>();
                     context.Database.EnsureCreated();
-                    DbInitializer.Initialize(context);
+                    SeedData_Library.Initialize(context);
                 }
                 catch (Exception ex)
                 {

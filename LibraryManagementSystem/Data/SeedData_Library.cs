@@ -2,7 +2,7 @@ using RazorPagesLibrary.Models;
 using System;
 using System.Linq;
 namespace LibraryManagementSystem{
-    public static class DbInitializer{
+    public static class SeedData_Library{
         public static void Initialize(RazorPagesLibraryContext context){
             if(context.Library.Any()){
                 return;
