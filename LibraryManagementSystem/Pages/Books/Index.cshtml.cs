@@ -34,7 +34,7 @@ namespace LibraryManagementSystem.Pages_Books
             // SELECT LIST SEARCH
             // DROP DOWN
             // BOOK CATEGORY
-            IQueryable<string> genreQuery = from m in _context.Library
+            IQueryable<string> categoryQuery = from m in _context.Library
                                     orderby m.BookCategory
                                     select m.BookCategory;
 
@@ -53,7 +53,7 @@ namespace LibraryManagementSystem.Pages_Books
                 libraries = libraries.Where(x => x.BookCategory == Category);
             }
 
-            BookCategory = new SelectList(await genreQuery.Distinct().ToListAsync());
+            BookCategory = new SelectList(await categoryQuery.Distinct().ToListAsync());
 
             Library = await libraries.ToListAsync();
         }
