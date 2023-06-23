@@ -18,7 +18,10 @@ namespace LibraryManagementSystem{
                     PublishDate = new DateTime(1960, 7, 11),
                     OnLoan = false,
                     LoanedTimes = 1,
-                    LoanedByName = null
+                    LoanedByName = null,
+                    TotalPages = 300,
+                    Publisher = "Pengiun",
+                    ISBN = "978-0446310789"
                 },
                 new Library
                 {
@@ -30,7 +33,10 @@ namespace LibraryManagementSystem{
                     PublishDate = new DateTime(1925, 4, 10),
                     OnLoan = false,
                     LoanedTimes = 2,
-                    LoanedByName = null
+                    LoanedByName = null,
+                    TotalPages = 345,
+                    Publisher = "Pengiun Classics",
+                    ISBN = "979-8405801308"
                 },
                 new Library
                 {
@@ -42,7 +48,10 @@ namespace LibraryManagementSystem{
                     PublishDate = new DateTime(1949, 6, 8),
                     OnLoan = false,
                     LoanedTimes = 10,
-                    LoanedByName = null
+                    LoanedByName = null,
+                    TotalPages = 384,
+                    Publisher = "Orwell Classics",
+                    ISBN = "978-0008322069"
                 },
                 new Library
                 {
@@ -54,7 +63,10 @@ namespace LibraryManagementSystem{
                     PublishDate = new DateTime(1813, 1, 28),
                     OnLoan = true,
                     LoanedTimes = 5,
-                    LoanedByName = "G. Austen"
+                    LoanedByName = "G. Austen",
+                    TotalPages = 401,
+                    Publisher = "Pengiun Classics",
+                    ISBN = "978-0141439518"
                 },
                 new Library
                 {
@@ -66,7 +78,10 @@ namespace LibraryManagementSystem{
                     PublishDate = new DateTime(1954, 7, 29),
                     OnLoan = false,
                     LoanedTimes = 0,
-                    LoanedByName = null
+                    LoanedByName = null,
+                    TotalPages = 1248,
+                    Publisher = "William Morrow",
+                    ISBN = "978-0063274730"
                 },
                 new Library
                 {
@@ -78,7 +93,10 @@ namespace LibraryManagementSystem{
                     PublishDate = new DateTime(1997, 6, 26),
                     OnLoan = true,
                     LoanedTimes = 100,
-                    LoanedByName = "Ruchir Chawdhry"
+                    LoanedByName = "Ruchir Chawdhry",
+                    TotalPages = 368,
+                    Publisher = "Bloomsbury",
+                    ISBN = "978-1526646651"
                 }
             };
             context.Library.AddRange(libraries);
