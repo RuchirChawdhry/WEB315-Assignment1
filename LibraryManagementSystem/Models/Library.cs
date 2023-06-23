@@ -17,5 +17,11 @@ namespace RazorPagesLibrary.Models
     public bool OnLoan { get; set; }
     public int LoanedTimes { get; set; }
     public string LoanedByName { get; set; }
+    
+    // New Properties
+    public int TotalPages { get; set; } // Integer type property
+    public string Publisher { get; set; } // String type property
+    public string ISBN { get; set; } // String type property
+
     }
 }
