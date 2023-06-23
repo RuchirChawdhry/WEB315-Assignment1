@@ -45,7 +45,7 @@ namespace LibraryManagementSystem.Pages_Books
 
             if (!string.IsNullOrEmpty(SearchString))
             {
-                libraries = libraries.Where(s => s.BookName.Contains(SearchString));
+                libraries = libraries.Where(s => s.BookName.ToLower().Contains(SearchString.ToLower()));
             }
 
             if (!string.IsNullOrEmpty(Category))
