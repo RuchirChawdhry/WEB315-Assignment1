@@ -46,6 +46,8 @@ dotnet ef database update
 
 dotnet ef migrations add newModelProperties
 
+dotnet ef migrations add ModelPropertiesValidation
+
 
 
 

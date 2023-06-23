@@ -2,14 +2,16 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LibraryManagementSystem.Migrations
 {
     [DbContext(typeof(RazorPagesLibraryContext))]
-    partial class RazorPagesLibraryContextModelSnapshot : ModelSnapshot
+    [Migration("20230623205254_ModelPropertiesValidation")]
+    partial class ModelPropertiesValidation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
