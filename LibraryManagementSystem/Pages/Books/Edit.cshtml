@@ -54,6 +54,22 @@
                 <input asp-for="Library.LoanedByName" class="form-control" />
                 <span asp-validation-for="Library.LoanedByName" class="text-danger"></span>
             </div>
+
+            <div class="form-group">
+                <label asp-for="Library.TotalPages" class="control-label"></label>
+                <input asp-for="Library.TotalPages" class="form-control" />
+                <span asp-validation-for="Library.TotalPages" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Library.Publisher" class="control-label"></label>
+                <input asp-for="Library.Publisher" class="form-control" />
+                <span asp-validation-for="Library.Publisher" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Library.ISBN" class="control-label"></label>
+                <input asp-for="Library.ISBN" class="form-control" />
+                <span asp-validation-for="Library.ISBN" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
