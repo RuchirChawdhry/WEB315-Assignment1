@@ -1,0 +1,15 @@
+﻿@page "/"
+
+<h1>Library App</h1>
+
+Theme: @ThemeName
+
+<p>Name: @YourName</p>
+
+<p>Current Date Time: @CurrentDateTime</p>
+
+@code {
+    private string ThemeName = "Library App";
+    private string YourName = "Ruchir Chawdhry";
+    private string CurrentDateTime = DateTime.Now.ToString("F");
+}
