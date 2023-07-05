@@ -2,6 +2,28 @@
 
 <h3>Library Books List</h3>
 
+<button class="btn btn-primary" @onclick="ViewBooks">View Books</button>
+<ul>
+    @foreach (var item in libraryBooks)
+    {
+        <li>@item</li>
+    }
+</ul>
+
+
 @code {
+    private string[] libraryBooks = new string[] { };
+
+    private void ViewBooks()
+    {
+        libraryBooks = new string[]
+        {
+            "To Kill a Mockingbird",
+            "1984",
+            "The Great Gatsby",
+            "The Lord of the Rings",
+            "Harry Potter and the Philosopher's Stone"
+        };
+    }
 
 }
