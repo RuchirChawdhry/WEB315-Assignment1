@@ -2,17 +2,22 @@
 
 <h3>Library Books List</h3>
 
+<input type="number" @bind="@displayLimit" min="0" max="@libraryBooks.Length" @oninput="HandleInputChange" />
+
+
 <button class="btn btn-primary" @onclick="ViewBooks">View Books</button>
 <ul>
-    @foreach (var item in libraryBooks)
+    @foreach (var book in libraryBooks.Take(displayLimit))
     {
-        <li>@item</li>
+        <li>@book</li>
     }
 </ul>
 
 
 @code {
     private string[] libraryBooks = new string[] { };
+    private int displayLimit = 5;
+
 
     private void ViewBooks()
     {
@@ -25,5 +30,11 @@
             "Harry Potter and the Philosopher's Stone"
         };
     }
+
+    private void HandleInputChange(ChangeEventArgs e)
+    {
+        displayLimit = Convert.ToInt32(e.Value);
+    }
+
 
 }
