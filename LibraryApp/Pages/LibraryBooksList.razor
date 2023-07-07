@@ -2,20 +2,20 @@
 
 <h3>Library Books List</h3>
 
-<input type="number" @bind="@displayLimit" min="0" max="@libraryBooks.Length" @oninput="HandleInputChange" />
-
+<input type="number" min="0" max="@libraryBooks.Length" @onchange="@(e => UpdateResults(int.Parse(e.Value.ToString())))" />
 
 <button class="btn btn-primary" @onclick="ViewBooks">View Books</button>
-<ul>
-    @foreach (var book in libraryBooks.Take(displayLimit))
+
+<p>
+@for(int i = 0; i < displayLimit; i++)
     {
-        <li>@book</li>
+        @libraryBooks[i] <br />
     }
-</ul>
+</p>
 
 
 @code {
-    private string[] libraryBooks = new string[] { };
+    private string[] libraryBooks = new string[5];
     private int displayLimit = 5;
 
 
@@ -31,10 +31,10 @@
         };
     }
 
-    private void HandleInputChange(ChangeEventArgs e)
+    private void UpdateResults(int num)
     {
-        displayLimit = Convert.ToInt32(e.Value);
+    if(num > 0 && num <= libraryBooks.Length){
+        displayLimit = num;
     }
-
-
+    }
 }
