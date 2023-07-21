@@ -39,7 +39,7 @@ namespace RuchirChawdhryChat.Server
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseResponseCompression();
-            
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -63,6 +63,7 @@ namespace RuchirChawdhryChat.Server
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
                 endpoints.MapFallbackToFile("index.html");
+                endpoints.MapHub<ChatHub>("/chathub");
             });
         }
     }
